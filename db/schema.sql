@@ -17,7 +17,6 @@ CREATE TABLE walkers (
 
 -- Client Table
 -- Stores client name, address, contact info, and pet name
--- Work on linking more than one pet
 CREATE TABLE clients (
     id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
     first_name VARCHAR(30),
@@ -28,5 +27,19 @@ CREATE TABLE clients (
     pets_id INT,
     FOREIGN KEY (pets_id),
     REFERENCES pets (id)
+    ON DELETE SET NULL
+);
+
+-- Pets Table
+-- Stores pet name, age, breed, owners, and when they are walked
+CREATE TABLE pets (
+    id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    dog_name VARCHAR(30),
+    dog_age DECIMAL(3),
+    breed VARCHAR(30),
+    -- how to add when they are walked to work in conjunction with google calendar api ??
+    clients_id INT,
+    FOREIGN KEY (clients_id),
+    REFERENCES clients (id),
     ON DELETE SET NULL
 );
