@@ -37,7 +37,8 @@ CREATE TABLE pets (
     dog_name VARCHAR(30),
     dog_age DECIMAL(3),
     breed VARCHAR(30),
-    -- how to add when they are walked to work in conjunction with google calendar api ??
+    walk_time DECIMAL(2),
+    walk_day VARCHAR(30),
     clients_id INT,
     FOREIGN KEY (clients_id),
     REFERENCES clients (id),
