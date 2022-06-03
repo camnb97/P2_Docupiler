@@ -1,16 +1,9 @@
-// starting time
-// Ending Time
-// Date
-// location
-// Service
-// UserId
-// eventBody
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Event extends Model {}
+class Pets extends Model {}
 
-Event.init(
+Pets.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -18,29 +11,30 @@ Event.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        start_time: {
-            type: DataTypes.DATE, //TIME ?
-            allowNull: false,
-        },
-        end_date: {
-            type: DataTypes.DATE,
-            allowNull: false,
-        },
-        date: {
-            type: DataTypes.DATE,
-            allowNull: false,
-        },
-        location: {
-            //should the type be from the google api?
+        dog_name: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        service: {
-
+        dog_age: {
+            //is DECIMAL correct?
+            type: DataTypes.DECIMAL,
+            allowNull: false,
+        },
+        breed: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        walk_time: {
+            type: DataTypes.DECIMAL,
+            allowNull: false,
+        },
+        walk_day: {
+            type: DataTypes.STRING,
+            allowNull: false,
         }
     }, {
         //any other model options?
     }
 );
 
-module.exports = Event
+module.exports = Pets
