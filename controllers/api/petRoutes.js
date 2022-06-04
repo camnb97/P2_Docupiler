@@ -17,14 +17,7 @@ router.post('/', async (req, res) => {
 
 //Put Route//
 router.put('/', async (req, res) => {
-    try {
-      
-      });
-  
-      res.status(200).json(newProject);
-    } catch (err) {
-      res.status(400).json(err);
-    }
+   
   });
 
 //Delete Route//
