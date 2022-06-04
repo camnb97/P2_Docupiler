@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Clients extends Model {}
+class Clients extends Model { }
 
 Clients.init(
     {
@@ -32,12 +32,17 @@ Clients.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        //can this be a array?
         pets: {
-
+            type: DataTypes.STRING,
+            allowNull: false,
         },
-    }, {
-        //any other model options?
+    },
+    {
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'clients',
     }
 );
 

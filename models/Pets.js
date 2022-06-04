@@ -33,8 +33,13 @@ Pets.init(
             type: DataTypes.STRING,
             allowNull: false,
         }
-    }, {
-        //any other model options?
+    },
+    {
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'pets',
     }
 );
 
