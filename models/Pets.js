@@ -25,6 +25,7 @@ Pets.init(
             allowNull: false,
         },
         walk_time: {
+            //24 hour calender, one hour walk for very dog an input the time as an integer 1-24
             type: DataTypes.DECIMAL,
             allowNull: false,
         },
