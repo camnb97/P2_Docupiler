@@ -4,16 +4,16 @@ const Pets = require('./Pets');
 
 
 User.hasMany(Clients, {
-  foreignKey: '',
+  foreignKey: 'clients_id',
   onDelete: 'CASCADE'
 });
 
 Clients.belongsTo(User, {
-  foreignKey: '',
+  foreignKey: 'clients_id',
 });
 
 Pets.belongsTo(Clients, {
-    foreignKey: '',
+    foreignKey: 'clients_id',
 })
 
 module.exports = { User };
