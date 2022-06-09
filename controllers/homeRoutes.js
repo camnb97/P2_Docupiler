@@ -2,18 +2,17 @@ const router = require('express').Router();
 const { Pets, Clients, User } = require('../models');
 const withAuth = require('../utils/auth');
 
-
+//Get All Pets//
 router.get('/', async (req, res) => {
   try {
-    // Get all projects and JOIN with user data
     const petData = await Pets.findAll({
       include: [
         Clients
       ],
     });
-    // Serialize data so the template can read it
+
     const pets = petData.map((pet) => pet.get({ plain: true }));
-    // Pass serialized data and session flag into template
+    
     res.render('homepage', { 
       pets, 
       logged_in: req.session.logged_in 
@@ -23,51 +22,51 @@ router.get('/', async (req, res) => {
   }
 });
 
-// router.get('/project/:id', async (req, res) => {
-//   try {
-//     const projectData = await Project.findByPk(req.params.id, {
-//       include: [
-//         {
-//           model: User,
-//           attributes: ['name'],
-//         },
-//       ],
-//     });
-//     const project = projectData.get({ plain: true });
-//     res.render('project', {
-//       ...project,
-//       logged_in: req.session.logged_in
-//     });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
+//Get Pet 
+router.get('/pet/:id', async (req, res) => {
+  try {
+    const petData = await Pets.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ['name'],
+        },
+      ],
+    });
+    const pet = petData.get({ plain: true });
+    res.render('pet', {
+      ...pet,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
-// Use withAuth middleware to prevent access to route
-// router.get('/profile', withAuth, async (req, res) => {
-//   try {
-//     // Find the logged in user based on the session ID
-//     const userData = await User.findByPk(req.session.user_id, {
-//       attributes: { exclude: ['password'] },
-//       include: [{ model: Project }],
-//     });
-//     const user = userData.get({ plain: true });
-//     res.render('profile', {
-//       ...user,
-//       logged_in: true
-//     });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
+//User Profile//
+router.get('/profile', withAuth, async (req, res) => {
+  try {
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ['username', 'password'] },
+      include: [{ model: Pets }],
+    });
+    const user = userData.get({ plain: true });
+    res.render('profile', {
+      ...user,
+      logged_in: true
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
-// router.get('/login', (req, res) => {
-//   // If the user is already logged in, redirect the request to another route
-//   if (req.session.logged_in) {
-//     res.redirect('/profile');
-//     return;
-//   }
-//   res.render('login');
-// });
+//Login Redirect//
+router.get('/login', (req, res) => {
+  if (req.session.logged_in) {
+    res.redirect('/profile');
+    return;
+  }
+  res.render('login');
+});
 
 module.exports = router;

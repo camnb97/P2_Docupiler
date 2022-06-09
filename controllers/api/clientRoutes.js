@@ -1,16 +1,16 @@
 const router = require('express').Router();
-const { Pets, Clients } = require('../../models');
+const { Clients, Pets } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 //Get//
 router.get("/", async (req, res) => {
   try {
-    const petData = await Pets.findAll({
+    const clientData = await Clients.findAll({
       include: [
-        Clients
+        Pets
       ],
     });
-    res.status(200).json(petData);
+    res.status(200).json(clientData);
   } catch (err) {
     res.status(500).json(err);
   }
@@ -20,12 +20,12 @@ router.get("/", async (req, res) => {
 //Post//
 router.post('/new', withAuth, async (req, res) => {
   try {
-    const newPet = await Pets.create({
+    const newClient = await Clients.create({
       ...req.body,
       user_id: req.session.user_id,
     });
 
-    res.status(200).json(newPet);
+    res.status(200).json(newClient);
   } catch (err) {
     res.status(400).json(err);
   }
@@ -34,12 +34,12 @@ router.post('/new', withAuth, async (req, res) => {
 //Put//
 router.put('/:id', withAuth, async (req, res) => {
   try {
-      const petData = await Pets.findByPk({
+      const clientData = await Clients.findByPk({
           where: {
               id: req.params.ids,
           },
       });
-      res.status(200).json(petData);
+      res.status(200).json(clientData);
   } catch (err) {
       res.status(500).json(err);
   }
@@ -48,19 +48,19 @@ router.put('/:id', withAuth, async (req, res) => {
 //Delete//
 router.delete('/:id', withAuth, async (req, res) => {
   try {
-    const petData = await Pets.destroy({
+    const clientData = await Clients.destroy({
       where: {
         id: req.params.id,
         user_id: req.session.user_id,
       },
     });
 
-    if (!petData) {
+    if (!clientData) {
       res.status(404).json({ message: 'No pet found with this id!' });
       return;
     }
 
-    res.status(200).json(petData);
+    res.status(200).json(clientData);
   } catch (err) {
     res.status(500).json(err);
   }
