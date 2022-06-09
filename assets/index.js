@@ -1,13 +1,3 @@
-
-const router = require('express').Router();
-const userRoutes = require('./userRoutes');
-const petRoutes = require('./petRoutes');
-const clientRoutes = require('./clientRoutes');
-
-router.use('/users', userRoutes);
-router.use('/pets', petRoutes);
-router.use('/client', clientRoutes);
-
 var calendarEl = document.getElementById("calendar");
 var calendar = new FullCalendar.Calendar(calendarEl, {
   initialView: "dayGridMonth",
