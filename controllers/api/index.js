@@ -5,6 +5,7 @@ const petRoutes = require('./petRoutes');
 const clientRoutes = require('./clientRoutes');
 
 router.use('/users', userRoutes);
+
 router.use('/pets', petRoutes);
 router.use('/client', clientRoutes);
 
@@ -31,3 +32,4 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
 });
 
 calendar.render();
+
