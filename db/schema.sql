@@ -3,8 +3,9 @@ CREATE DATABASE p2_db;
 
 USE p2_db;
 
--- -- Dog Walkers Table
--- -- Stores user, password, and their clients
+-- Dog Walkers Table
+-- Stores user, password, and their clients
+
 -- CREATE TABLE users (
 --     id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
 --     user VARCHAR(30),
@@ -14,9 +15,8 @@ USE p2_db;
 --     REFERENCES clients (id)
 --     ON DELETE SET NULL
 -- );
-
--- -- Client Table
--- -- Stores client name, address, contact info, and pet name
+-- Client Table
+-- Stores client name, address, contact info, and pet name
 -- CREATE TABLE clients (
 --     id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
 --     first_name VARCHAR(30),
@@ -30,8 +30,8 @@ USE p2_db;
 --     ON DELETE SET NULL
 -- );
 
--- -- Pets Table
--- -- Stores pet name, age, breed, owners, and when they are walked
+-- Pets Table
+-- Stores pet name, age, breed, owners, and when they are walked
 -- CREATE TABLE pets (
 --     id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
 --     dog_name VARCHAR(30),
