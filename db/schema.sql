@@ -5,7 +5,7 @@ USE p2_db;
 
 -- Dog Walkers Table
 -- Stores user, password, and their clients
-CREATE TABLE walkers (
+CREATE TABLE users (
     id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
     user VARCHAR(30),
     password VARCHAR(30),
