@@ -68,5 +68,12 @@ router.get('/login', (req, res) => {
   }
   res.render('login');
 });
-
+// calendar//
+router.get('/calendar', (req, res) => {
+  // if (req.session.logged_in) {
+  //   res.redirect('/profile');
+  //   return;
+  // }
+  res.render('calendar');
+});
 module.exports = router;
