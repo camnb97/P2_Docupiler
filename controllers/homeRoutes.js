@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
 
     const pets = petData.map((pet) => pet.get({ plain: true }));
     
-    res.render('homepage', { 
+    res.render('all', { 
       pets, 
       logged_in: req.session.logged_in 
     });
