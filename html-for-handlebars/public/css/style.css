@@ -1,0 +1,152 @@
+.title-header {
+    text-decoration: none;
+    color: #4D2600;
+    text-align: center;
+}
+
+/* LOGIN PAGE */
+/* Bordered form */
+form {
+    border: 3px solid #f1f1f1;
+}
+
+/* Full-width inputs */
+input[type=text],
+input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #7C7877;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+    opacity: 0.8;
+}
+
+/* Extra style for the cancel button (red) */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/* Center the avatar image inside this container */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+/* Add padding to containers */
+.container {
+    padding: 16px;
+}
+
+/* The "Forgot password" text */
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+
+    .cancelbtn {
+        width: 100%;
+    }
+}
+
+/* MENU TABS PAGE */
+/* Set height of body and the document to 100% to enable "full page tabs" */
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+}
+
+.tablink:hover {
+    background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+    color: white;
+    display: none;
+    padding: 100px 20px;
+    height: 100%;
+}
+
+#Calendar {
+    background-color: #806242;
+}
+
+#Welcome {
+    background-color: #CDA57B;
+}
+
+#View-Client {
+    background-color: #C0874B;
+}
+
+#Add-Client {
+    background-color: #493F2B;
+}
+
+/* Pulled from mini project */
+
+header,
+.project:not(:last-child) {
+    border-bottom: 1px solid #ccc;
+}
+
+.no-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: #1b89bc;
+    text-decoration: none;
+    font-size: 100%;
+}
+
+.no-button:hover {
+    color: #065b83;
+    text-decoration: underline;
+}
+
+.dollar-amount {
+    color: #056605;
+    font-weight: bold;
+    margin-left: -5px;
+}
