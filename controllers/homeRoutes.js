@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
 
     const pets = petData.map((pet) => pet.get({ plain: true }));
     
-    res.render('homepage', { 
+    res.render('all', { 
       pets, 
       logged_in: req.session.logged_in 
     });
@@ -68,5 +68,12 @@ router.get('/login', (req, res) => {
   }
   res.render('login');
 });
-
+// calendar//
+router.get('/calendar', (req, res) => {
+  // if (req.session.logged_in) {
+  //   res.redirect('/profile');
+  //   return;
+  // }
+  res.render('calendar');
+});
 module.exports = router;
