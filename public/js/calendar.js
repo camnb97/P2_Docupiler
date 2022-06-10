@@ -4,8 +4,8 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
   selectable: true,
   unselectAuto: true,
   dateClick: function (info) {
-    // console.log(info.dateStr);
-    // maybe save date and prompt in database
+     // console.log(info.dateStr);
+     // maybe save date and prompt in database
     var title = prompt("add client name and meeting time");
 
     calendar.addEvent({
@@ -16,7 +16,7 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
 
   },
   select: function (info) {
-    // alert("selected " + info.startStr + " to " + info.endStr);
+     // alert("selected " + info.startStr + " to " + info.endStr);
   },
 });
 
