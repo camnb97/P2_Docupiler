@@ -22,7 +22,7 @@
                 <a href="/profile">profile</a> |
                 <button class="no-button" id="logout">logout</button>
                 {{else}}
-                <a href="/login">login</a>
+                <a href="login.handlebars">login</a>
                 {{/if}}
             </nav>
         </header>
@@ -36,7 +36,10 @@
 
             <div id="Calendar" class="tabcontent">
                 <h3>View Calendar</h3>
-                <p>Insert Calendar Here</p>
+                <button class="cal-btn"
+                    onclick="window.open(this.href,'popUpWindow','height=400,width=600,left=10,top=10,,scrollbars=yes,menubar=no'); return false;">Click
+                    Here to Open Calendar</button>
+
             </div>
 
             <div id="Welcome" class="tabcontent">
