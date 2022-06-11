@@ -1,0 +1,43 @@
+<div class="flex-column justify-space-around">
+    <header class="display-flex justify-space-between align-center p-2">
+        <h1 class="title-header">
+            <span role="img" aria-label="dog">🐕 GoFido! The App For Dog Walkers</span>
+        </h1>
+        <nav>
+            {{#if logged_in}}
+            <button class="no-button" id="logout">logout</button>
+            {{else}}
+            <a href="login.handlebars">login</a>
+            {{/if}}
+        </nav>
+    </header>
+    <main class="container container-fluid mt-5">
+        <h2>Log into your account</h2>
+        <form action="action_page.php" method="post">
+            <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button type="submit">Login</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" class="cancelbtn">Cancel</button>
+                <span class="psw">Not registered? <a href="#">Create a profile here</a>.</span>
+            </div>
+        </form>
+    </main>
+    <footer>
+
+    </footer>
+</div>
+
+{{#if logged_in}}
+<script src="/js/logout.js"></script>
+{{/if}}
