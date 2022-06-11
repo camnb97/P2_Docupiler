@@ -60,6 +60,47 @@ router.get('/profile', withAuth, async (req, res) => {
   }
 });
 
+//New Client Page//
+router.get('/newcli', withAuth, async (req, res) => {
+  try {
+    res.render('newcli', {
+      ...user,
+      logged_in: true
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+//View Client Page//
+router.get('/viewcli', withAuth, async (req, res) => {
+  try {
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ['username', 'password'] },
+      include: [{ model: Pets }],
+    });
+    const user = userData.get({ plain: true });
+    res.render('profile', {
+      ...user,
+      logged_in: true
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+//Calendar//
+router.get('/calendar', (req, res) => {
+  if (req.session.logged_in) {
+    try {
+      const calendarData = await Calendar.findAll({
+        include: [
+          Calendar
+        ],
+      });
+      const calendar = calendarData.map((calendar) => calendar.get({ plain: true }));
+    res.render('calendar');
+
 //Login Redirect//
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
@@ -68,12 +109,5 @@ router.get('/login', (req, res) => {
   }
   res.render('login');
 });
-// calendar//
-router.get('/calendar', (req, res) => {
-  // if (req.session.logged_in) {
-  //   res.redirect('/profile');
-  //   return;
-  // }
-  res.render('calendar');
-});
+
 module.exports = router;
