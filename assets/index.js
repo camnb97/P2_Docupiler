@@ -8,7 +8,19 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
      // maybe save date and prompt in database
     var title = prompt("add client name and meeting time");
 
+    if (title) {
+      calendar.fullCalendar('renderEvent', {
+          title: title,
+          start: start,
+          end: end,
+      }, true);
+    }
     calendar.addEvent({
+      title: title,
+      start: info.dateStr,
+      allDay: true,
+    });
+    calendar.post({
       title: title,
       start: info.dateStr,
       allDay: true,
