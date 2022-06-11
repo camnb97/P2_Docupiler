@@ -1,0 +1,57 @@
+<div class="flex-column justify-space-around">
+    <header class="display-flex justify-space-between align-center p-2">
+        <h1 class="title-header">
+            <span role="img" aria-label="dog">🐕 GoFido! The app for dog walkers</span>
+        </h1>
+        <nav>
+            <!-- Conditionally render login or logout links -->
+            {{#if logged_in}}
+            <a href="/profile">profile</a> |
+            <button class="no-button" id="logout">logout</button>
+            {{else}}
+            <a href="login.handlebars">login</a>
+            {{/if}}
+        </nav>
+    </header>
+    <main class="container container-fluid mt-5">
+
+        <!-- Tab Menu -->
+        <button class="tablink" onclick="openPage('Calendar', this, '#806242')">Calendar</button>
+        <button class="tablink" onclick="openPage('Welcome', this, '#CDA57B')" id="defaultOpen">Welcome</button>
+        <button class="tablink" onclick="openPage('View-Client', this, '#C0874B')">View Client</button>
+        <button class="tablink" onclick="openPage('Add-Client', this, '#493F2B')">Add Client</button>
+
+        <div id="Calendar" class="tabcontent">
+            <h3>View Calendar</h3>
+            <button class="cal-btn"
+                onclick="window.open(this.href,'popUpWindow','height=400,width=600,left=10,top=10,,scrollbars=yes,menubar=no'); return false;">Click
+                Here to Open Calendar</button>
+
+        </div>
+
+        <div id="Welcome" class="tabcontent">
+            <h3>Welcome {{name}}!</h3>
+            <p>Please select from the above tabs</p>
+        </div>
+
+        <div id="View-Client" class="tabcontent">
+            <h3>View Existing Client</h3>
+            <p>Insert search bar for clients connected to database and Amiel's code for the view client page</p>
+        </div>
+
+        <div id="Add-Client" class="tabcontent">
+            <h3>Add New Client</h3>
+            <p>Blank field for input new client contacts and pets. Populates database upon completion.</p>
+        </div>
+
+    </main>
+    <footer>
+
+    </footer>
+</div>
+
+<!-- Render script for logged in users only -->
+{{#if logged_in}}
+<script src="../public/js/logout.js"></script>
+<script src="../public/js/tabs.js"></script>
+{{/if}}
