@@ -4,9 +4,7 @@
             <span role="img" aria-label="dog">🐕 GoFido! The app for dog walkers</span>
         </h1>
         <nav>
-            <!-- Conditionally render login or logout links -->
             {{#if logged_in}}
-            <a href="/profile">profile</a> |
             <button class="no-button" id="logout">logout</button>
             {{else}}
             <a href="login.handlebars">login</a>
@@ -35,12 +33,16 @@
 
         <div id="View-Client" class="tabcontent">
             <h3>View Existing Client</h3>
-            <p>Insert search bar for clients connected to database and Amiel's code for the view client page</p>
+            <p>
+                {{!-- insert view clients handlebars --}}
+            </p>
         </div>
 
         <div id="Add-Client" class="tabcontent">
             <h3>Add New Client</h3>
-            <p>Blank field for input new client contacts and pets. Populates database upon completion.</p>
+            <p>
+                {{!-- insert new clients handlebars --}}
+            </p>
         </div>
 
     </main>
