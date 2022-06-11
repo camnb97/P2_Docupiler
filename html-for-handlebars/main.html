@@ -5,17 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GoFido!</title>
-    <link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
     <link href='./fullcalendar/lib/main.css' rel='stylesheet' />
-    <link rel="stylesheet" href="../../public/css/jass.css">
-    <link rel="stylesheet" href="../../public/css/style.css">
+    <link rel="stylesheet" href="public/css/jass.css">
+    <link rel="stylesheet" href="public/css/style.css">
 </head>
 
 <body>
     <div class="flex-column justify-space-around">
         <header class="display-flex justify-space-between align-center p-2">
             <h1 class="title-header">
-                <span role="img" aria-label="dog">🐕 GoFido! The App For Dog Walkers</span>
+                <span role="img" aria-label="dog">🐕 GoFido! The app for dog walkers</span>
             </h1>
             <nav>
                 <!-- Conditionally render login or logout links -->
@@ -23,13 +22,14 @@
                 <a href="/profile">profile</a> |
                 <button class="no-button" id="logout">logout</button>
                 {{else}}
-                <a href="../login.handlebars">login</a>
+                <a href="/login">login</a>
                 {{/if}}
             </nav>
         </header>
         <main class="container container-fluid mt-5">
             <!-- Render the sub layout -->
             <!--Welcomes user on every page? -->
+            <h2>Welcome, {{name}}!</h2>
             {{{ body }}}
         </main>
         <footer>
@@ -38,9 +38,17 @@
     </div>
 
     <!-- Render script for logged in users only -->
-    {{#if logged_in}}
-    <script src="../../public/js/logout.js"></script>
-    {{/if}}
+    <!-- {{#if logged_in}} -->
+    <script src="/js/logout.js"></script>
+    <!-- {{/if}} -->
 </body>
 
 </html>
+
+<!-- 
+- main layout *
+- login *
+- menu *
+- new client
+- view client (redirect link to schedule pets) (delete client? window alert)
+- calendar (would it be a handlebar) -->

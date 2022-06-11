@@ -1,0 +1,58 @@
+<div class="flex-column justify-space-around">
+    <header class="display-flex justify-space-between align-center p-2">
+        <h1 class="title-header">
+            <span role="img" aria-label="dog">🐕 GoFido! The App For Dog Walkers</span>
+        </h1>
+        <nav>
+            {{#if logged_in}}
+            <button class="no-button" id="logout">logout</button>
+            {{else}}
+            <a href="login.handlebars">login</a>
+            {{/if}}
+        </nav>
+    </header>
+    <main class="container container-fluid mt-5">
+
+        <!-- Tab Menu -->
+        <button class="tablink" onclick="openPage('Calendar', this, '#806242')">Calendar</button>
+        <button class="tablink" onclick="openPage('Welcome', this, '#CDA57B')" id="defaultOpen">Welcome</button>
+        <button class="tablink" onclick="openPage('View-Client', this, '#C0874B')">View Client</button>
+        <button class="tablink" onclick="openPage('Add-Client', this, '#493F2B')">Add Client</button>
+
+        <div id="Calendar" class="tabcontent">
+            <h3>View Calendar</h3>
+            <a href="calendar.handlebars" target="_blank">
+                <button>Click Here to Open Calendar</button>
+            </a>
+        </div>
+
+        <div id="Welcome" class="tabcontent">
+            <h3>Welcome {{name}}!</h3>
+            <p>Please select from the above tabs.</p>
+        </div>
+
+        <div id="View-Client" class="tabcontent">
+            <h3>View Existing Client</h3>
+            <p>
+                {{!-- insert view clients handlebars --}}
+            </p>
+        </div>
+
+        <div id="Add-Client" class="tabcontent">
+            <h3>Add New Client</h3>
+            <p>
+                {{!-- insert new clients handlebars --}}
+            </p>
+        </div>
+
+    </main>
+    <footer>
+
+    </footer>
+</div>
+
+<!-- Render script for logged in users only -->
+{{#if logged_in}}
+<script src="../public/js/logout.js"></script>
+<script src="../public/js/tabs.js"></script>
+{{/if}}
