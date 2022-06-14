@@ -11,24 +11,26 @@ router.get('/', async (req, res) => {
     });
     const pets = petData.map((pet) => pet.get({ plain: true }));
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     
+<<<<<<< HEAD
     res.render('login', { 
+=======
+    res.render('all', { 
+>>>>>>> amiel
       pets, 
       logged_in: req.session.logged_in 
 =======
+>>>>>>> develop
     res.render('login', {
       pets,
       logged_in: req.session.logged_in
->>>>>>> 748fa1787e5cf71bdb230e75756c92e8fab60951
     });
   } catch (err) {
     res.status(500).json(err);
   }
 });
-<<<<<<< HEAD
-
-=======
->>>>>>> 748fa1787e5cf71bdb230e75756c92e8fab60951
 //User Profile//
 router.get('/profile', withAuth, async (req, res) => {
   try {
@@ -45,11 +47,6 @@ router.get('/profile', withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 748fa1787e5cf71bdb230e75756c92e8fab60951
 //Login Redirect//
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
@@ -58,8 +55,4 @@ router.get('/login', (req, res) => {
   }
   res.render('login');
 });
-<<<<<<< HEAD
-
-=======
->>>>>>> 748fa1787e5cf71bdb230e75756c92e8fab60951
 module.exports = router;
