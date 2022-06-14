@@ -4,7 +4,9 @@
     <meta charset='UTF-8' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <title>GoFido!</title>
+    <link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
     <link href='./fullcalendar/lib/main.css' rel='stylesheet' />
+<<<<<<< HEAD
     <link rel='stylesheet' href='/css/jass.css' />
     <link rel='stylesheet' href='/css/style.css' />
   </head>
@@ -34,13 +36,45 @@
         {{{body}}}
       </main>
       <footer>
+=======
+    <link rel="stylesheet" href="../../public/css/jass.css">
+    <link rel="stylesheet" href="../../public/css/style.css">
+</head>
+
+<body>
+    <div class="flex-column justify-space-around">
+        <header class="display-flex justify-space-between align-center p-2">
+            <h1 class="title-header">
+                <span role="img" aria-label="dog">🐕 GoFido! The App For Dog Walkers</span>
+            </h1>
+            <nav>
+                <!-- Conditionally render login or logout links -->
+                {{#if logged_in}}
+                <a href="/profile">profile</a> |
+                <button class="no-button" id="logout">logout</button>
+                {{else}}
+                <a href="../login.handlebars">login</a>
+                {{/if}}
+            </nav>
+        </header>
+        <main class="container container-fluid mt-5">
+            <!-- Render the sub layout -->
+            <!--Welcomes user on every page? -->
+            {{{ body }}}
+        </main>
+        <footer>
+>>>>>>> b7ed25594056b61ffa5097a65796351c6bf11cd7
 
       </footer>
     </div>
 
     <!-- Render script for logged in users only -->
     {{#if logged_in}}
+<<<<<<< HEAD
       <script src='/js/logout.js'></script>
+=======
+    <script src="../../public/js/logout.js"></script>
+>>>>>>> b7ed25594056b61ffa5097a65796351c6bf11cd7
     {{/if}}
   </body>
 
