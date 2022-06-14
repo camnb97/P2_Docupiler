@@ -1,0 +1,29 @@
+{{#if Clients.length}}
+  <div class="col-md-6 project-list">
+    <h1>View Clients</h1>
+
+    {{#each Clients as |Clients|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h3><a href="/Clients/{{clients.id}}">{{Clients.first_name}} {{Clients.last_name}} </a></h4>
+        <ul><a href="/Clients/{{clients.id}}">
+            <li>{{Clients.address}}</li>
+            <li>{{Clients.email}}</li> 
+            <li>{{Clients.phone}}</li> 
+            <li>{{Clients.petname}} </li>
+            <li>{{Clients.breed}}</li> 
+            <li>{{Clients.special_instr}} </li>  
+            </a>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{clients.id}}">Delete</button>
+      </div>
+      <div class="form-group">
+            <button  class="btn btn-primary">Add to Calender</button>
+        </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+</div>
