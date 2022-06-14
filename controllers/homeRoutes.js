@@ -12,7 +12,11 @@ router.get('/', async (req, res) => {
     const pets = petData.map((pet) => pet.get({ plain: true }));
 <<<<<<< HEAD
     
+<<<<<<< HEAD
     res.render('login', { 
+=======
+    res.render('all', { 
+>>>>>>> amiel
       pets, 
       logged_in: req.session.logged_in 
 =======
