@@ -9,27 +9,29 @@ router.use('/users', userRoutes);
 router.use('/pets', petRoutes);
 router.use('/client', clientRoutes);
 
-var calendarEl = document.getElementById("calendar");
-var calendar = new FullCalendar.Calendar(calendarEl, {
-  initialView: "dayGridMonth",
-  selectable: true,
-  unselectAuto: true,
-  dateClick: function (info) {
-    // console.log(info.dateStr);
-    // maybe save date and prompt in database
-    var title = prompt("add client name and meeting time");
+module.exports = router;
 
-    calendar.addEvent({
-      title: title,
-      start: info.dateStr,
-      allDay: true,
-    });
+// var calendarEl = document.getElementById("calendar");
+// var calendar = new FullCalendar.Calendar(calendarEl, {
+//   initialView: "dayGridMonth",
+//   selectable: true,
+//   unselectAuto: true,
+//   dateClick: function (info) {
+//     // console.log(info.dateStr);
+//     // maybe save date and prompt in database
+//     var title = prompt("add client name and meeting time");
 
-  },
-  select: function (info) {
-    // alert("selected " + info.startStr + " to " + info.endStr);
-  },
-});
+//     calendar.addEvent({
+//       title: title,
+//       start: info.dateStr,
+//       allDay: true,
+//     });
 
-calendar.render();
+//   },
+//   select: function (info) {
+//     // alert("selected " + info.startStr + " to " + info.endStr);
+//   },
+// });
+
+// calendar.render();
 

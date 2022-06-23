@@ -11,8 +11,7 @@ Clients.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        //one for first name one for last?
-        // possibly add special directions category for anything specific to each dog?
+        
         first_name: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -37,15 +36,15 @@ Clients.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        //breed: {
-        //    type: DataTypes.STRING,
-        //    allowNull: false,
-        //},
+        breed: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
         
-        //special_dir: {
-        //    type: DataTypes.STRING,
-        //    allowNull: false,
-        //}
+        special_instr: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        }
     },
     {
         sequelize,
