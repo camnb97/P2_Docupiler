@@ -31,6 +31,8 @@ I CAN do so easily in one place
 
 Deployed Link
 GitHub Repo
+Wireframe
+Google Doc
 
 
 # Screenshots
@@ -50,9 +52,7 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 
 # Credits
 
-List your collaborators, if any, with links to their GitHub profiles.
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-If you followed tutorials, include links to those here as well.
+GoFido was born from a phenomenal team effort. Thank you to our collaborators [Sebastion Aristizabal](https://github.com/SebasAristi), [Cameron Buss](https://github.com/camnb97), [Anita Chengalva](https://github.com/anitachengalva), [Amiel Edwards](https://github.com/asedwards888), [Alejandro Enriquez](https://github.com/alejandroet39), and [Jared Teroka](https://github.com/jteraoka).
 
 ## License
 
