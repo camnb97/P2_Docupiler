@@ -9,6 +9,8 @@ router.use('/users', userRoutes);
 router.use('/pets', petRoutes);
 router.use('/client', clientRoutes);
 
+module.exports = router;
+
 // var calendarEl = document.getElementById("calendar");
 // var calendar = new FullCalendar.Calendar(calendarEl, {
 //   initialView: "dayGridMonth",
