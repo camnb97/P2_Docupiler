@@ -27,10 +27,12 @@ I CAN do so easily in one place
 
 # Links
 
-Deployed Link
-GitHub Repo
-Wireframe
-Google Doc
+- FINISHED PRODUCT
+    - [Deployed Link](https://dashboard.heroku.com/apps/intense-dusk-69821/deploy/heroku-git)
+    - [GitHub Repo](https://github.com/camnb97/P2_Docupiler)
+- THE PROCESS
+    - [Wireframe](https://jamboard.google.com/d/1bbX-0BaqKBZmJ_Ia01zb40HypbspxYx0p8wCyZ5q22Y/edit?usp=sharing)
+    - [Team Doc](https://docs.google.com/document/d/1MnEZP0P1gjlBzUX8xovsTFlxqJ2k6WoZJDkr-OxXWec/edit?usp=sharing)
 
 
 # Screenshots
