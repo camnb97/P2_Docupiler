@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a Node.js application utilizing Express, Handlebars, and the FullCalander API application aims to help self employed dog walkers to organize their client base. GoFido gives you a secure and accessible place to keep your client information as well as keep a schedule of when you are walking each dog. Each client’s info can be updated or deleted, and new clients can be added. The available calendar
+GoFido is a Node.js application utilizing Express, Handlebars, and the FullCalander API, which aims to help self employed dog walkers to manage their client database. This application provides a secure and accessible place to store client information, as well as maintain a schedule of when each dog should be walked. Each client’s stored information may be updated or deleted, and new clients can be added. The available calendar provides a tidy visual outlining which clients' pets are to be walked and at what time, all visibile within a glance. The required login upon launch and password encryption ensures that sensitive client information remains secure at all times.
 
 ## User Story
 
