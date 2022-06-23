@@ -10,33 +10,33 @@ GoFido is a Node.js application utilizing Sequelize, Express, Handlebars, and th
 
 ```md
 AS A self-employed person with many clients and events to schedule
-I WANT a place to keep my clients info and keep track of my schedule
-SO THAT when I need to see my clients’ information or schedule
+I WANT a place to keep my clients' info and keep track of my schedule
+SO THAT when I need to see my clients' information or my schedule
 I CAN do so easily in one place
 ```
 
 # Table of Contents
 
 - [Links](#links)
-- [Screenshots](#screenshots)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
 
+<br/>
 
 # Links
 
 - FINISHED PRODUCT
     - [Deployed Link](https://dashboard.heroku.com/apps/intense-dusk-69821/deploy/heroku-git)
     - [GitHub Repo](https://github.com/camnb97/P2_Docupiler)
+
+    <br/>
 - THE PROCESS
     - [Wireframe](https://jamboard.google.com/d/1bbX-0BaqKBZmJ_Ia01zb40HypbspxYx0p8wCyZ5q22Y/edit?usp=sharing)
     - [Team Doc](https://docs.google.com/document/d/1MnEZP0P1gjlBzUX8xovsTFlxqJ2k6WoZJDkr-OxXWec/edit?usp=sharing)
 
-
-# Screenshots
-
+<br/>
 
 # Installation
 
@@ -59,4 +59,4 @@ Click each contributor's name to see more of their work.
 
 # License &nbsp; ![MIT Shield](https://img.shields.io/badge/license-MIT-green)
 
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). 
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
