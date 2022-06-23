@@ -6,6 +6,13 @@ GoFido is a Node.js application utilizing Express, Handlebars, and the FullCalan
 
 ## User Story
 
+```md
+AS A self-employed person with many clients and events to schedule
+I WANT a place to keep my clients info and keep track of my schedule
+SO THAT when I need to see my clients’ information or schedule
+I CAN do so easily in one place
+```
+
 ## Links
 
 Deployed Link
@@ -13,20 +20,7 @@ GitHub Repo
 
 ## Screenshots
 
-# Description
 
-This application aims to help self employed dog walkers to organize their client base. GoFido gives you a secure and accessible place to keep your client information as well as keep a schedule of when you are walking each dog. Each client’s info can be updated or deleted, and new clients can be added. The available calendar
-User Story
-AS A self-employed person with many clients and events to schedule
-I WANT a place to keep my clients info and keep track of my schedule
-SO THAT when I need to access my clients’ or add/update one
-I CAN do so very easily and in one place
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
-
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
 
 # Table of Contents (Optional)
 
@@ -53,6 +47,6 @@ List your collaborators, if any, with links to their GitHub profiles.
 If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
 If you followed tutorials, include links to those here as well.
 
-# License
+## License
 
-## The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
+The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
