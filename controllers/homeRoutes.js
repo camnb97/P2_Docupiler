@@ -10,22 +10,11 @@ router.get('/', async (req, res) => {
       ],
     });
     const pets = petData.map((pet) => pet.get({ plain: true }));
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
     
-<<<<<<< HEAD
-    res.render('login', { 
-=======
     res.render('all', { 
->>>>>>> amiel
       pets, 
       logged_in: req.session.logged_in 
-=======
->>>>>>> develop
-    res.render('login', {
-      pets,
-      logged_in: req.session.logged_in
     });
   } catch (err) {
     res.status(500).json(err);
